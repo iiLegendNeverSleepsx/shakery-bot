@@ -22,9 +22,9 @@ module.exports.run = async () => {
 	});
 
 	client.on("ready", async () => {
-		client.user.setPresence({ game: { type: 3, name: "Bervo Hotels! | ;help" }, status: "online" });
+		client.user.setPresence({ game: { type: 3, name: "Death Eaters! | ;help" }, status: "online" });
 		console.log(`${client.user.tag} has started!`);
-		rbx.login({ username: "CreamyzRankingBot", password: process.env.rblx});
+		//rbx.login({ username: "CreamyzRankingBot", password: process.env.rblx});
 	});
 
 	client.on("guildMemberAdd", (member) => {
