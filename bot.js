@@ -28,14 +28,14 @@ module.exports.run = async () => {
 	});
 
 	client.on("guildMemberAdd", (member) => {
-		const channel = member.guild.channels.find("name", "member-logs");
+		const channel = member.guild.channels.find("name", "join-logs");
 		if (!channel) return;
-		channel.send(`Welcome to **Creamy'z Cafe | Offical Server**, ${member.user.tag}! :smile:`);
+		channel.send(`${member.user.tag} has joined the server!`);
 	});
 	client.on("guildMemberRemove", (member) => {
 		const channel = member.guild.channels.find("name", "member-logs");
 		if (!channel) return;
-		channel.send(`${member.user.tag} has left the server! :slight_frown:`);
+		channel.send(`${member.user.tag} has left the server!`);
 	});
 	client.on("messageDelete", async (message) => { if (message.author.bot) return;
 		let cha = message.guild.channels.find("name", "mod-logs");
