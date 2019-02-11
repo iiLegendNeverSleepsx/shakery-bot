@@ -33,7 +33,7 @@ module.exports.run = async () => {
 		channel.send(`${member.user.tag} has joined the server!`);
 	});
 	client.on("guildMemberRemove", (member) => {
-		const channel = member.guild.channels.find("name", "member-logs");
+		const channel = member.guild.channels.find("name", "mod-logs");
 		if (!channel) return;
 		channel.send(`${member.user.tag} has left the server!`);
 	});
