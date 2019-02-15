@@ -1,5 +1,5 @@
 module.exports.run = async (bot, message) => {
-	const allowedid = ["293060399106883584,250082335238651905"];
+	const allowedid = ['250082335238651905','529635957306032130','293060399106883584'];
 	if (allowedid.includes(message.author.id)) {
 		message.react("✅");
 		bot.destroy();
