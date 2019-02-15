@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
     }
   }
 	
-  const allowedid = ['293060399106883584, 250082335238651905, 529635957306032130'];
+  const allowedid = ['250082335238651905','529635957306032130','293060399106883584'];
   if (allowedid.includes(message.author.id)) {
     try {
       const code = args.join(" ");
