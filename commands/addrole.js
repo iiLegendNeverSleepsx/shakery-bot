@@ -8,7 +8,8 @@ module.exports.run = async (bot, message, args) => {
   let role = args.join(" ").slice(1);
   if(!role) return message.reply("Specify a role!");
   let gRole = message.guild.roles.find(`name`, role);
-  if(!gRole) return message.reply("Couldn't find that role.");
+  if(!gRole) return message.reply("Couldn't find that role.")
+  await console.log("Congrats to <@${rMember.id}>, they have been given the role ${gRole.name}.");
 
   if(rMember.roles.has(gRole.id)) return message.reply("They already have that role!");
   await(rMember.addRole(gRole.id));
