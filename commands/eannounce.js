@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 	if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You cannot run this command. You must be a HR+!");
 	let embed = new Discord.RichEmbed()
-		.setTitle("Server Announcement")
+		.setTitle("Shakery Announcement")
 		.setColor("#ff4b4b")
 		.setDescription(args.join(" "))
 	        .setThumbnail("https://cdn.discordapp.com/attachments/541388616774057984/546105276491759658/asdas.png")
