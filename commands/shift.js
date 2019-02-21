@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 	if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You cannot run this command. You must be a HR+!");
 	let embed = new Discord.RichEmbed()
-		.setTitle("Shakery Shify")
+		.setTitle("Shakery Shift")
 		.setColor("#63dfff")
 		.setDescription("Hello everyone! There is a shift going on at the cafe! Come on and join me for a luxrious time! https://www.roblox.com/games/2693333108/Shakery-V2")
 		.setFooter(`Shift hosted by ${message.author.tag}`, message.author.displayAvatarURL)
