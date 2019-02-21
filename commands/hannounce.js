@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
 		.setDescription(args.join(" "))
 		.setFooter(`Announcement made by ${message.author.tag}`, message.author.displayAvatarURL)
 	        .setThumbnail("https://cdn.discordapp.com/attachments/541388616774057984/546105276491759658/asdas.png");
-          bot.channels.get("541365809931616287").send("@here", {embed: embed}).then(() => {
+          bot.channels.get("548242441610854414").send("@here", {embed: embed}).then(() => {
 		message.reply("Message sent!");
 	}).catch(() => {
 		message.reply("Something went wrong when announcing, please check my permissions and try again.");
