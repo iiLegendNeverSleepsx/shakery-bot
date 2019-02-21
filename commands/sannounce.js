@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
 		.setColor("#64bdff")
 		.setDescription(args.join(" "))
 		.setFooter(`Announcement made by ${message.author.tag}`, message.author.displayAvatarURL);
-	bot.channels.get("541009950697062430").send({embed: embed}).then(() => {
+	bot.channels.get("548243923295010833").send({embed: embed}).then(() => {
 		message.reply("Message sent!");
 	}).catch(() => {
 		message.reply("Something went wrong when announcing, please check my permissions and try again.");
