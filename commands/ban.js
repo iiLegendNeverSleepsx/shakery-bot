@@ -1,7 +1,6 @@
 
 module.exports.run = async (bot, message, args) => {
-	if (!message.member.hasPermission("BAN_MEMBERS") || !message.member.hasPermission("ADMINISTRATOR"))
-		return message.reply("Insufficent permissions! You need to have the `BAN_MEMBERS` permission!");
+	if (!message.member.hasPermission("BAN_MEMBERS")) return message.reply("Insufficent permissions! You need to have the `BAN_MEMBERS` permission!");
 
 	let member = message.mentions.members.first() || message.guild.members.get(args[0]);
 	if (!member)
