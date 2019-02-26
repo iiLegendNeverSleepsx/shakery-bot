@@ -18,7 +18,7 @@ module.exports.run = async (bot, message) => {
 		title: "\n",
 		description: "\n",
 		fields: [{
-			name: "Creamy'z Cafe Bot Uptime",
+			name: "Shakery Bot Uptime",
 			value: up,
 			inline: true
 		},
