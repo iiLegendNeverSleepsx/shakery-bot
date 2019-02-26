@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-	if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You cannot run this command. You must be a HR+!");
+	if (!message.member.hasPermission("VIEW_AUDIT_LOG")) return message.reply("You cannot run this command. You must be a HR+!");
 	let embed = new Discord.RichEmbed()
 		.setTitle("QOTD")
 		.setColor("#63dfff")
