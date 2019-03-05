@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-	if (!message.member.hasPermission("MOVE_MEMBERS")) return message.reply("You cannot run this command. You must be a HR+!");
+	if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("You cannot run this command. You must be a HR+!");
 	let embed = new Discord.RichEmbed()
 		.setTitle("Shakery Announcement")
 		.setColor("#ff4b4b")
