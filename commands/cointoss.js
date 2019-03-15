@@ -1,8 +1,8 @@
 module.exports.run = async (bot, message) => {
-const { premiumaccess } = require("/app/bot.js")
-if (premiumaccess.includes(message.author.role)) {
-	message.reply(`You flipped ${(Math.floor(Math.random() * 2)) ? "heads" : "tails"}!`);
-	}
+    const { premiumaccess } = require("/app/bot.js");
+    if (premiumaccess.includes(message.author.role)) {
+        message.reply(`You flipped ${(Math.floor(Math.random() * 2)) ? "heads" : "tails"}!`);
+    }
 };
 module.exports.help = {
 	name: "cointoss",
