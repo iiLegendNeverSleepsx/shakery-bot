@@ -1,7 +1,7 @@
 const fs = require("fs");
 var embedutility = "";
 var embedmoderation = "";
-var embedpremium - "";
+var embedpremium = "";
 
 module.exports.run = async (bot, message, args) => {
 	fs.readdir("./commands", (err, files) => {
