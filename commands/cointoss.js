@@ -1,5 +1,5 @@
 module.exports.run = async (bot, message) => {
-const premiumaccess = require("/app/bot.js");
+const premiumAccess = require("/app/bot.js").premiumaccess
 if (premiumaccess.includes(message.author.role)) {
 		message.reply(`You flipped ${(Math.floor(Math.random() * 2)) ? "heads" : "tails"}!`);
 	}
