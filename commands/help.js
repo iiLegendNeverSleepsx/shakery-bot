@@ -1,6 +1,7 @@
 const fs = require("fs");
 var embedutility = "";
 var embedmoderation = "";
+var embedpremium - "";
 
 module.exports.run = async (bot, message, args) => {
 	fs.readdir("./commands", (err, files) => {
@@ -14,6 +15,8 @@ module.exports.run = async (bot, message, args) => {
 			let props = require(`../commands/${f}`);
 			if (props.help.category === "Utility") {
 				embedutility = embedutility + ` \n ;${props.help.name} - ${props.help.description}`;
+			if (props.help.category === "Premium") {
+				embedpremium = embedpremium + ` \n ;${props.help.name} - ${props.help.description}`;
 			} else if (props.help.category === "Moderation") {
 				embedmoderation = embedmoderation + ` \n ;${props.help.name} - ${props.help.description}`;
 			}
@@ -33,7 +36,7 @@ module.exports.run = async (bot, message, args) => {
 						icon_url: bot.user.avatarURL
 					},
 					title: "Commands",
-					description: "Commands for Creamy'z Cafe Bot",
+					description: "Commands for Shakery Bot",
 					fields: [{
 						name: "Name",
 						value: props.help.name,
@@ -82,6 +85,10 @@ module.exports.run = async (bot, message, args) => {
 				fields: [{
 					name: "Moderation",
 					value: "`;ban` - Bans the user given. \n `;unban` - Revokes a ban. \n`;kick` - Kicks the user given. \n`;warn` - Warns the user given. \n`;purge` Purges the amount of messages given."
+				},
+				{
+					name: "Premium",
+					value: "**Coming soon!**"
 				},
 				{
 					name: "Utility",
