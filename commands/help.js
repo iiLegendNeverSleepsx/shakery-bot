@@ -138,9 +138,9 @@ module.exports.run = async (bot, message, args) => {
 						text: "By Lxphere"
 					}
 				}
-			});
+			})
 		}
-	}
+	};
 
 module.exports.help = {
 	name: "help",
