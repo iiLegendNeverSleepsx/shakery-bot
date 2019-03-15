@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
 			} else if (props.help.category === "Moderation") {
 				embedmoderation = embedmoderation + ` \n ;${props.help.name} - ${props.help.description}`;
 			}
-		})
+		}
 	});
 
 	const command = args.shift();
