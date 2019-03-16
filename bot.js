@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const fs = require("fs");
 const rbx = require("noblox.js");
-module.exports.premiumaccess = ["556196885946302468, 556196932221927454"];
 module.exports.run = async () => {
 	const client = new Discord.Client({ disableEveryone: false, fetchAllMembers: true });
 
