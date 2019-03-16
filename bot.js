@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const fs = require("fs");
+const bot = client;
 const client = bot;
 const rbx = require("noblox.js");
 module.exports.run = async () => {
