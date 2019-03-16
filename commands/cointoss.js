@@ -1,5 +1,5 @@
 module.exports.run = async (bot, message) => {
-    const { premiumaccess } = require("/app/bot.js");
+const premiumaccess= ['556196885946302468','556196932221927454'];
     if (premiumaccess.includes(message.author.role)) return message.reply("This is a premium only command!").catch(() => bot.safeSend(message, module.exports.help.name));
 	 message.reply(`You flipped ${(Math.floor(Math.random() * 2)) ? "heads" : "tails"}!`).catch(() => bot.safeSend(message, module.exports.help.name));
 };
