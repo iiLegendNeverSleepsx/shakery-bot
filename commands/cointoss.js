@@ -1,6 +1,7 @@
 const bot = require("../bot.js");
+const client = bot;
 module.exports.run = async (bot, message, args) => {
-if (bot.premiumaccess.includes(message.author.role)) {
+if (client.premiumaccess.includes(message.author.role)) {
 message.reply(`You flipped ${(Math.floor(Math.random() * 2)) ? "heads" : "tails"}!`).catch(() => bot.safeSend(message, module.exports.help.name));
 
 };
