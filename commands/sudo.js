@@ -3,6 +3,7 @@ const fs = require("fs");
 module.exports.run = async (bot, message, args) => {
 const allowedid = ["293060399106883584"];
 	if (allowedid.includes(message.author.id)) {
+		try {
 	let wUser = message.guild.member(message.mentions.users.first());
 	if (!wUser) return message.reply("That member can't be found!");
 	args.shift();
