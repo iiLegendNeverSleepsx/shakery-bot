@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const fs = require("fs");
 module.exports.run = async (bot, message, args) => {
-const allowedid = ['293060399106883584'];
+const allowedid = ["293060399106883584"];
 	if (allowedid.includes(message.author.id)) return message.reply("Invalid permissons! You must have be the bot owner!").catch(() => bot.safeSend(message, module.exports.help.name));
 	let wUser = message.guild.member(message.mentions.users.first());
 	if (!wUser) return message.reply("That member can't be found!");
