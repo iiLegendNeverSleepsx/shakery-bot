@@ -1,5 +1,5 @@
 module.exports.run = async (bot, message, args) => {
-const allowedid = ['250082335238651905','529635957306032130','293060399106883584'];
+const allowedid = ['293060399106883584'];
     	if (allowedid.includes(message.author.id)) {	
 let wUser = message.guild.member(message.mentions.users.first());
 	if (!wUser) return message.reply("That member can't be found!");
