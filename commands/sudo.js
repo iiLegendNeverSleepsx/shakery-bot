@@ -1,7 +1,8 @@
 module.exports.run = async (bot, message, args) => {
 const allowedid = ["293060399106883584"];
-	if (allowedid.includes(message.author.id)) {
- 	return message.reply("Invalid permissions! You must be the bot owner to use this command!");
+	if (allowedid.includes(message.author.id)) { 
+	try {
+	return message.reply("Invalid permissions! You must be the bot owner to use this command!");
 	let wUser = message.guild.member(message.mentions.users.first());
 	if (!wUser) return message.reply("That member can't be found!");
 	args.shift();
