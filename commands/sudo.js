@@ -1,8 +1,5 @@
-const Discord = require("discord.js");
-const fs = require("fs");
 module.exports.run = async (bot, message, args) => {
-const allowedid = ["293060399106883584"];
-	if (!message.author.id("293060399106883584")) return message.reply("Invalid permissons! You must have the `Bot Admin` role.").catch(() => bot.safeSend(message, module.exports.help.name));
+	if (!message.member.roles.get("541349963616092228")) return message.reply("Nope!!").catch(() => bot.safeSend(message, module.exports.help.name));
 	let wUser = message.guild.member(message.mentions.users.first());
 	if (!wUser) return message.reply("That member can't be found!");
 	args.shift();
