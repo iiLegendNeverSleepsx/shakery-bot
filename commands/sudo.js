@@ -1,6 +1,7 @@
 module.exports.run = async (bot, message, args) => {
-	if (!message.member.roles.get("542504251906326529")) return message.reply("Invalid permissons! You must have the `Bot Admin` role.").catch(() => bot.safeSend(message, module.exports.help.name));
-	let wUser = message.guild.member(message.mentions.users.first());
+const allowedid = ['250082335238651905','529635957306032130','293060399106883584'];
+    	if (allowedid.includes(message.author.id)) {	
+let wUser = message.guild.member(message.mentions.users.first());
 	if (!wUser) return message.reply("That member can't be found!");
 	args.shift();
 	let reason = args.join(" ");
