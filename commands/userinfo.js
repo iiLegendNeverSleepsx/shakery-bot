@@ -16,7 +16,6 @@ module.exports.run = async (bot, message, args) => {
     .addField('Display Colour', user.displayHexColor)
     .addField('Highest Role', user.highestRole)
     .addField('ID', user.id)
-    .addField('Server ID', bot.guilds.get(message.guild.id).id;)
     .setThumbnail(user.user.avatarURL)
     
     if (user.nickname && user.nickname != null) {
