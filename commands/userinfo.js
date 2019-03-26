@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const fs = require("fs"); 
 
 const special = {
-  "293060399106883584": "Shakery Bot Developer"
+  "293060399106883584": "Bot Administrator & Developer"
 }
 
 module.exports.run = async (bot, message, args) => {
@@ -16,6 +16,7 @@ module.exports.run = async (bot, message, args) => {
     .addField('Display Colour', user.displayHexColor)
     .addField('Highest Role', user.highestRole)
     .addField('ID', user.id)
+    .addField('Server ID', bot.guilds.get(message.guild.id).id;)
     .setThumbnail(user.user.avatarURL)
     
     if (user.nickname && user.nickname != null) {
@@ -27,7 +28,6 @@ module.exports.run = async (bot, message, args) => {
     }
 	
     embed.addField('Options', '[View Avatar](' + user.user.avatarURL + ')')
-    
     message.channel.send({embed})
 }
 
