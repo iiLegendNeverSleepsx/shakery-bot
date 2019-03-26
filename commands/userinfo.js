@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
     
     const embed = new Discord.RichEmbed()
     .setTitle(user.user.username + '\'s Info')
-    .setColor(user.displayColor)
+    .setColor("#94d8ff")
     .addField('Display Colour', user.displayHexColor)
     .addField('Highest Role', user.highestRole)
     .addField('ID', user.id)
