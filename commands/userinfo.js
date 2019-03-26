@@ -7,9 +7,9 @@ const special = {
 }
 
 module.exports.run = async (bot, message, args) => {
-    const user = (response.mentions.members.first() || response.guild.members.get(args[0]))
+    const user = (message.mentions.members.first() || response.guild.members.get(args[0]))
     
-    if (!user) return response.reply('Oops! That is not a valid user!')
+    if (!user) return message.reply('Oops! That is not a valid user!')
     
     const embed = new Discord.RichEmbed()
     .setTitle(user.user.username + '\'s Info')
@@ -29,7 +29,7 @@ module.exports.run = async (bot, message, args) => {
 	
     embed.addField('Options', '[View Avatar](' + user.user.avatarURL + ')')
     
-    response.channel.send({embed})
+    message.channel.send({embed})
 }
 
 module.exports.help = {
