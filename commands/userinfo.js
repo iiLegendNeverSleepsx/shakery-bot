@@ -2,8 +2,7 @@ const Discord = require("discord.js");
 const fs = require("fs"); 
 
 const special = {
-  "293060399106883584": "Bot Administrator",
-  "293060399106883584": "Bot Developer"
+  "293060399106883584": "Shakery Bot Developer"
 }
 
 module.exports.run = async (bot, message, args) => {
