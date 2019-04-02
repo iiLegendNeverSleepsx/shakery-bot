@@ -25,10 +25,8 @@ module.exports.run = async () => {
 		client.user.setPresence({ game: { type: 3, name: "Shakery! | ;help | 1+1 =2?!" }, status: "online" });
 		console.log(`${client.user.tag} has started!`);
 		 await noblox.cookieLogin('process.env.Key');
-			}
-			run();
+			});
 		//rbx.login({ username: "CreamyzRankingBot", password: process.env.rblx});
-	});
 
 	client.on("guildMemberAdd", (member) => {
 		const channel = member.guild.channels.find("name", "join-logs");
